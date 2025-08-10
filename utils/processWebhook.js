@@ -60,6 +60,7 @@ async function processWebhookPayload(payload, io) {
         if (updated) {
           io.emit('message_status_update', {
             messageId: status.id,
+            meta_msg_id: status.meta_msg_id, 
             status: status.status
           });
         }
